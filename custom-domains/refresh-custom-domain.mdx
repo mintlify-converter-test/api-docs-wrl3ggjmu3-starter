@@ -1,0 +1,208 @@
+---
+title: "Manual DNS Verification Trigger"
+description: "This endpoint manually triggers DNS verification for a custom domain. You shouldn't need to call this endpoint after adding a new custom domain, as it's performed automatically, but it may be necessary if there are DNS changes that occur after your custom domain has been initially added."
+---
+This endpoint manually triggers DNS verification for a custom domain. You shouldn't need to call this endpoint after adding a new custom domain, as it's performed automatically, but it may be necessary if there are DNS changes that occur after your custom domain has been initially added.
+
+serviceId
+
+string
+
+required
+
+The ID of the service
+
+customDomainIdOrName
+
+string
+
+required
+
+The ID or name of the custom domain
+
+202
+
+Custom domain verification triggered
+
+400
+
+The request could not be understood by the server.
+
+
+===========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+401
+
+Authorization information is missing or invalid.
+
+
+=========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+403
+
+You do not have permissions for the requested resource.
+
+
+================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+404
+
+Unable to find the requested resource.
+
+
+===============================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+406
+
+Unable to generate preferred media types as specified by Accept request header.
+
+
+========================================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+410
+
+The requested resource is no longer available.
+
+
+=======================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+429
+
+Rate limit has been surpassed.
+
+
+=======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+500
+
+An unexpected server error has occurred.
+
+
+=================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+503
+
+Server currently unavailable.
+
+
+======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+Updated 7 months ago
+
+* * *
+
+ShellNodeRubyPHPPython
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://api.render.com/v1/services/serviceId/custom-domains/customDomainIdOrName/verify \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+400401403404406410429500503
+
+Updated 7 months ago
+
+* * *
