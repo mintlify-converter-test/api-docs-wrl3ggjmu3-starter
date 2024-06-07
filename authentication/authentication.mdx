@@ -1,0 +1,50 @@
+---
+title: "Authenticate all requests to the Render API with an API key"
+description: "Guide on creating and managing API keys for authentication with the Render API."
+---
+You authenticate all requests to the Render API with an **API key**. You can create and manage API keys from your [Account Settings page](https://dashboard.render.com/u/settings)
+ in the Render Dashboard:
+
+![](https://files.readme.io/dc53e90-create-api-key.png)
+
+Every API key provides access to both your personal account _and_ any teams you belong to. Each resource object returned by the API includes an `owner_id` field that indicates which user or team owns that resource. For more details on resource ownership, see [Owners](https://render-api.readme.io/reference/owners-1)
+.
+
+> ⚠️
+> 
+> API keys are secret credentials!
+> 
+> 
+> --------------------------------------
+> 
+> Don’t publicly post your API key, commit it to version control, or otherwise share it with anyone outside your organization.
+> 
+> If you believe an API key has been compromised, revoke it from the Render Dashboard and create a new one.
+
+Providing an API key
+
+[](#providing-an-api-key)
+
+--------------------------------------------------
+
+You include your API key in each request via the `Authorization` HTTP header:
+
+`Authorization: Bearer API_KEY_GOES_HERE`
+
+Consult your HTTP library's documentation for the recommended way to set this header.
+
+To confirm that your API key works as expected, send your first API request with the following `curl` command (substitute your API key where indicated):
+
+cURL
+
+`curl --request GET \      --url 'https://api.render.com/v1/services?limit=3' \      --header 'Accept: application/json' \      --header 'Authorization: Bearer API_KEY_GOES_HERE'`
+
+  
+
+Updated about 1 month ago
+
+* * *
+
+Updated about 1 month ago
+
+* * *
