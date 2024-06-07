@@ -1,91 +1,116 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "api-docs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/api-docs_logo_inverted.jpg",
+    "light": "/logo/api-docs_logo.jpg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/api-docs_favicon.png",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#000000",
+    "light": "#f2f2f2",
+    "dark": "#000000",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#000000",
+      "to": "#f2f2f2"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Contact Sales",
+      "url": "https://render.com/contact-sales"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Get Started for Free",
+    "url": "https://render.com/get-started-for-free"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
+  "tabs": [],
   "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://render.com/blog"
     }
   ],
+  "modeToggle": {
+    "default": "light"
+  },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Jobs",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "jobs/list-job"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "HTTP Metrics",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "http-metrics/get-http-requests"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Requests",
       "pages": [
-        "api-reference/introduction"
+        "requests/requests"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Authentication",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "authentication/authentication"
+      ]
+    },
+    {
+      "group": "Pagination",
+      "pages": [
+        "pagination/pagination"
+      ]
+    },
+    {
+      "group": "Parameters",
+      "pages": [
+        "parameters/parameters"
+      ]
+    },
+    {
+      "group": "Rate Limiting",
+      "pages": [
+        "rate-limiting/rate-limiting"
+      ]
+    },
+    {
+      "group": "Memory Metrics",
+      "pages": [
+        "memory-metrics/get-memory",
+        "memory-metrics/get-memory-limit",
+        "memory-metrics/get-memory-target"
+      ]
+    },
+    {
+      "group": "Custom Domains",
+      "pages": [
+        "custom-domains/get-custom-domains",
+        "custom-domains/create-custom-domain",
+        "custom-domains/get-custom-domain",
+        "custom-domains/delete-custom-domain",
+        "custom-domains/refresh-custom-domain"
+      ]
+    },
+    {
+      "group": "Deploys",
+      "pages": [
+        "deploys/get-deploys",
+        "deploys/create-deploy",
+        "deploys/get-deploy",
+        "deploys/cancel-deploy",
+        "deploys/rollback-deploy"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/render",
+    "linkedin": "https://www.linkedin.com/company/renderco/",
+    "github": "https://github.com/renderinc"
   }
 }
