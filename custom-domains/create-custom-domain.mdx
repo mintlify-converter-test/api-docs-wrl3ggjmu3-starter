@@ -1,0 +1,306 @@
+---
+title: "🚧"
+description: "Starting February 1, 2022, we will begin charging $0.60 per custom domain per month beyond the first 25 custom domains for a web service or static site. The first 25 custom domains for web services and static sites will continue to be free."
+---
+> 🚧
+> --
+> 
+> Starting February 1, 2022, we will begin charging $0.60 per custom domain per month **beyond the first 25 custom domains** for a web service or static site. The first 25 custom domains for web services and static sites will continue to be free.
+
+serviceId
+
+string
+
+required
+
+The ID of the service
+
+name
+
+string
+
+required
+
+201
+
+Created
+
+
+================
+
+array of objects
+
+object
+
+id
+
+string
+
+required
+
+name
+
+string
+
+required
+
+domainType
+
+string
+
+required
+
+`apex` `subdomain`
+
+publicSuffix
+
+string
+
+required
+
+redirectForName
+
+string
+
+required
+
+verificationStatus
+
+string
+
+required
+
+`verified` `unverified`
+
+createdAt
+
+date-time
+
+required
+
+server
+
+object
+
+server object
+
+400
+
+The request could not be understood by the server.
+
+
+===========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+401
+
+Authorization information is missing or invalid.
+
+
+=========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+402
+
+You must enter payment information to perform this request.
+
+
+====================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+403
+
+You do not have permissions for the requested resource.
+
+
+================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+404
+
+Unable to find the requested resource.
+
+
+===============================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+406
+
+Unable to generate preferred media types as specified by Accept request header.
+
+
+========================================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+409
+
+The current state of the resource conflicts with this request.
+
+
+=======================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+410
+
+The requested resource is no longer available.
+
+
+=======================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+429
+
+Rate limit has been surpassed.
+
+
+=======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+500
+
+An unexpected server error has occurred.
+
+
+=================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+503
+
+Server currently unavailable.
+
+
+======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+Updated 7 months ago
+
+* * *
+
+ShellNodeRubyPHPPython
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://api.render.com/v1/services/serviceId/custom-domains \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+201400401402403404406409410429500503
+
+Updated 7 months ago
+
+* * *
