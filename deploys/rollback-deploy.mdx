@@ -1,0 +1,251 @@
+---
+title: "Service Rollback API Documentation"
+description: "Details the API endpoints and required parameters for rolling back a deploy to a previous version."
+---
+serviceId
+
+string
+
+required
+
+The ID of the service
+
+deployId
+
+string
+
+required
+
+The ID of the deploy to rollback to
+
+201
+
+OK
+
+
+===========
+
+object
+
+id
+
+string
+
+required
+
+commit
+
+object
+
+id
+
+string
+
+message
+
+string
+
+createdAt
+
+date-time
+
+image
+
+object
+
+Image information used when creating the deploy. Not present for Git-backed deploys
+
+ref
+
+string
+
+Image reference used when creating the deploy
+
+sha
+
+string
+
+SHA that the image reference was resolved to when creating the deploy
+
+registryCredential
+
+string
+
+Name of credential used to pull the image, if provided
+
+status
+
+string
+
+`created` `build_in_progress` `update_in_progress` `live` `deactivated` `build_failed` `update_failed` `canceled` `pre_deploy_in_progress` `pre_deploy_failed`
+
+trigger
+
+string
+
+`api` `blueprint_sync` `deploy_hook` `deployed_by_render` `manual` `other` `new_commit` `rollback` `service_resumed` `service_updated`
+
+finishedAt
+
+date-time
+
+createdAt
+
+date-time
+
+updatedAt
+
+date-time
+
+400
+
+The request could not be understood by the server.
+
+
+===========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+401
+
+Authorization information is missing or invalid.
+
+
+=========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+403
+
+You do not have permissions for the requested resource.
+
+
+================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+404
+
+Unable to find the requested resource.
+
+
+===============================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+429
+
+Rate limit has been surpassed.
+
+
+=======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+500
+
+An unexpected server error has occurred.
+
+
+=================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+503
+
+Server currently unavailable.
+
+
+======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+Updated 4 months ago
+
+* * *
+
+ShellNodeRubyPHPPython
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://api.render.com/v1/services/serviceId/rollback \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+201400401403404429500503
+
+Updated 4 months ago
+
+* * *
