@@ -1,0 +1,178 @@
+---
+title: "API Documentation"
+description: "Details on querying the time range and filtering options."
+---
+startTime
+
+date-time
+
+Epoch/Unix timestamp of end of time range to return. Defaults to `now() - 1 hour`.
+
+endTime
+
+date-time
+
+Epoch/Unix timestamp of end of time range to return. Defaults to `now()`.
+
+resolutionSeconds
+
+number
+
+The resolution of the returned data
+
+service
+
+string
+
+required
+
+Service ID to query. When multiple service query params are provided, they are ORed together
+
+host
+
+string
+
+The hosts of HTTP requests to filter to. When multiple host query params are provided, they are ORed together
+
+path
+
+string
+
+The paths of HTTP requests to filter to. When multiple path query params are provided, they are ORed together
+
+aggregateBy
+
+string
+
+The field to aggregate by
+
+statusCodehost
+
+200
+
+A successful response
+
+
+==============================
+
+array of objects
+
+object
+
+labels
+
+array of objects
+
+required
+
+List of labels describing the time series
+
+labels\*
+
+object
+
+field
+
+string
+
+required
+
+value
+
+string
+
+required
+
+values
+
+array of objects
+
+required
+
+The values of the time series
+
+values\*
+
+object
+
+timestamp
+
+date-time
+
+required
+
+value
+
+number
+
+required
+
+unit
+
+string
+
+required
+
+400
+
+The request could not be understood by the server.
+
+
+===========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+500
+
+An unexpected server error has occurred.
+
+
+=================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+Updated about 2 months ago
+
+* * *
+
+ShellNodeRubyPHPPython
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url 'https://api.render.com/v1/metrics/http-requests?resolutionSeconds=60' \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200400500
+
+Updated about 2 months ago
+
+* * *
