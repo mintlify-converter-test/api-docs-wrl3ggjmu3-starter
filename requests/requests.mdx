@@ -1,0 +1,36 @@
+---
+title: "PATCH endpoints"
+description: "PATCH endpoints in the Render API allow you to update details of an existing resource, following certain conventions such as avoiding nested resources."
+---
+PATCH endpoints (such as [Update service](https://render-api.readme.io/reference/update-service)
+) enable you to update details of an existing resource. The following conventions apply to PATCH endpoints in the Render API:
+
+No nested resources
+
+[](#no-nested-resources)
+
+------------------------------------------------
+
+PATCH endpoints are not used for updating nested resources. For example, if you want to manage custom domains for a service, you wouldn't do this through the Update service endpoint, but would instead use the [Add custom domain](https://render-api.readme.io/reference/create-custom-domain)
+ and [Delete custom domain](https://render-api.readme.io/reference/delete-custom-domain)
+ endpoints.
+
+What gets updated?
+
+[](#what-gets-updated)
+
+---------------------------------------------
+
+PATCH endpoints update any resource fields that you provide a new value for in your request body. This is true _even if a provided value is null/empty_. In this case, the endpoint removes or unsets the field for the resource.
+
+Any resource fields you _omit entirely_ from your request body remain unchanged.
+
+  
+
+Updated about 1 month ago
+
+* * *
+
+Updated about 1 month ago
+
+* * *
