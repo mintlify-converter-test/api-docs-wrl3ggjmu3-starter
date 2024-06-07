@@ -1,0 +1,222 @@
+---
+title: "serviceId"
+description: "The ID of the service"
+---
+serviceId
+
+string
+
+required
+
+The ID of the service
+
+cursor
+
+string
+
+Cursor to begin retrieving entries for this query
+
+limit
+
+number
+
+Max number of items that can be returned
+
+status
+
+array of strings
+
+Filter for the status of the job (`pending`, `running`, `succeeded`, or `failed`)
+
+status
+
+ADD string
+
+createdBefore
+
+date-time
+
+Filter for jobs created before a certain time (specified as an ISO 8601 timestamp)
+
+createdAfter
+
+date-time
+
+Filter for jobs created after a certain time (specified as an ISO 8601 timestamp)
+
+startedBefore
+
+date-time
+
+Filter for jobs started before a certain time (specified as an ISO 8601 timestamp)
+
+startedAfter
+
+date-time
+
+Filter for jobs started after a certain time (specified as an ISO 8601 timestamp)
+
+finishedBefore
+
+date-time
+
+Filter for jobs finished before a certain time (specified as an ISO 8601 timestamp)
+
+finishedAfter
+
+date-time
+
+Filter for jobs finished after a certain time (specified as an ISO 8601 timestamp)
+
+200
+
+OK
+
+
+===========
+
+array of objects
+
+object
+
+job
+
+object
+
+job object
+
+cursor
+
+string
+
+400
+
+The request could not be understood by the server.
+
+
+===========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+401
+
+Authorization information is missing or invalid.
+
+
+=========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+404
+
+Unable to find the requested resource.
+
+
+===============================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+429
+
+Rate limit has been surpassed.
+
+
+=======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+500
+
+An unexpected server error has occurred.
+
+
+=================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+503
+
+Server currently unavailable.
+
+
+======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+Updated 7 months ago
+
+* * *
+
+ShellNodeRubyPHPPython
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url 'https://api.render.com/v1/services/serviceId/jobs?limit=20' \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200400401404429500503
+
+Updated 7 months ago
+
+* * *
