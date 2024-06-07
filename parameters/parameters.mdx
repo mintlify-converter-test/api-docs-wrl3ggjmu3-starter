@@ -1,0 +1,39 @@
+---
+title: "Filter List Endpoints"
+description: "You can filter which results are returned by most list endpoints (such as List services). You provide filter values as query parameters separated by &."
+---
+You can filter which results are returned by most list endpoints (such as [List services](https://render-api.readme.io/reference/get-services)
+). You provide filter values as query parameters separated by `&`, like so:
+
+cURL
+
+`curl --request GET \      --url 'https://api.render.com/v1/services?name=test-service&type=static_site' \      --header 'Accept: application/json' \      --header 'Authorization: Bearer API_KEY_GOES_HERE'`
+
+If a filter value includes reserved characters (such as spaces), make sure it's [URL-encoded](https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding)
+.
+
+For available filters, consult the reference page for each list endpoint.
+
+Multi-value filters
+
+[](#multi-value-filters)
+
+------------------------------------------------
+
+You can provide multiple values for a single filter, separated by an _unencoded_ comma (`,`). If you do, the endpoint returns results that match _any_ provided value for that filter.
+
+For example, this request fetches all services of type `static_site` _or_ `web_service`:
+
+cURL
+
+`curl --request GET \      --url 'https://api.render.com/v1/services?type=static_site,web_service' \      --header 'Accept: application/json' \      --header 'Authorization: Bearer API_KEY_GOES_HERE'`
+
+  
+
+Updated about 1 month ago
+
+* * *
+
+Updated about 1 month ago
+
+* * *
