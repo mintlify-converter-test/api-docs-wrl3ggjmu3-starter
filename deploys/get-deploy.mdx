@@ -1,0 +1,246 @@
+---
+title: "serviceId"
+description: "Filter for deploys created after a certain time (specified as an ISO 8601 timestamp)"
+---
+serviceId
+
+string
+
+required
+
+The ID of the service
+
+createdBefore
+
+date-time
+
+Filter for deploys created before a certain time (specified as an ISO 8601 timestamp)
+
+createdAfter
+
+date-time
+
+Filter for deploys created after a certain time (specified as an ISO 8601 timestamp)
+
+updatedBefore
+
+date-time
+
+Filter for deploys updated before a certain time (specified as an ISO 8601 timestamp)
+
+updatedAfter
+
+date-time
+
+Filter for deploys updated after a certain time (specified as an ISO 8601 timestamp)
+
+finishedBefore
+
+date-time
+
+Filter for deploys finished before a certain time (specified as an ISO 8601 timestamp)
+
+finishedAfter
+
+date-time
+
+Filter for deploys finished after a certain time (specified as an ISO 8601 timestamp)
+
+cursor
+
+string
+
+Cursor to begin retrieving entries for this query
+
+limit
+
+number
+
+Max number of items that can be returned
+
+200
+
+OK
+
+
+===========
+
+array of objects
+
+object
+
+deploy
+
+object
+
+deploy object
+
+cursor
+
+string
+
+401
+
+Authorization information is missing or invalid.
+
+
+=========================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+403
+
+You do not have permissions for the requested resource.
+
+
+================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+404
+
+Unable to find the requested resource.
+
+
+===============================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+406
+
+Unable to generate preferred media types as specified by Accept request header.
+
+
+========================================================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+410
+
+The requested resource is no longer available.
+
+
+=======================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+429
+
+Rate limit has been surpassed.
+
+
+=======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+500
+
+An unexpected server error has occurred.
+
+
+=================================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+503
+
+Server currently unavailable.
+
+
+======================================
+
+object
+
+id
+
+string
+
+message
+
+string
+
+Updated 7 months ago
+
+* * *
+
+ShellNodeRubyPHPPython
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url 'https://api.render.com/v1/services/serviceId/deploys?limit=20' \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200401403404406410429500503
+
+Updated 7 months ago
+
+* * *
